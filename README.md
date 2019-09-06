@@ -1,1 +1,1 @@
-GLPI
+Projeto GLPI Wi2
