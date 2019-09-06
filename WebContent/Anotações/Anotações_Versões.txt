@@ -1,0 +1,74 @@
+Versão 1.0 - 26/07/2019
+- Junção dos projetos de conexão com o BD ("fj-21") e com o projeto servlets ("teste2").
+- Sem funcionamento entre os projetos.
+
+Versão 2.0 - 29/07/2019
+- Funcionamento da junção dos projetos "fj-21" e "teste2", teste realizado com digitação na tela com os campos "nome, email, endereço, dataNascimento(pegando a data atual)" e gravação no BD.
+
+Versão 3.0 - 30/07/2019
+- Alteração do tipo da variavel "dataNascimento" de Calendar pra String.
+- Ajustes nos métodos do CRUD da classe DAO.
+- Ajuste no formulario.html para poder testar o CRUD.
+- Criado a pasta "styles" e o arquivo "style.css" para o CSS do projeto GLPI.
+* trocado o caminho da pasta "styles" para a raiz do projeto (o ajuste do HTML não esta sendo reconhecida no TomCat). 
+Solução - 31/07/2019 -> "botão direito em cima do servidor e selecionar "Clean", para limpar o cache o tomcat e reconhecer a alteração". OU abrir o arquivo HTML no eclipse, para ele reconhecer a alteração automaticamente sem precisar dar o restart no servidor.
+
+Versão 4.0 - 31/07/2019
+- Renomeado a pasta "styles" para "CSS".
+- trocado a pasta CSS para a pasta WebContent.
+- Criado a HTML na pasta WebContent.
+Obs: Apenas arquivos de configuração e jars deverão ficar dentro de WEB-INF, demais arquivos como págias JSP, XHTML, javascripts, imagens, CSS deverão ficar dentro de WebContent.
+- Retirado o arquivo formulario.html do WEB-INF e adicionado na pasta HTML.
+* o arquivo styles.css não esta sendo reconhecido no arquivo formulario.html.
+Solução - 02/08/2019 -> retirado os dois pontos e a barra (../) no começo do link do arquivo CSS.
+* Parou de funcionar a classe "FormularioServlet", da o erro 404 de não encontrada o caminho "WEB-INF/formulario.html", tentado ajustar o "getRequestDispatcher" de volta, mas sem sucesso. 
+Solução - 01/08/2019 -> "reinstalado o eclipse".
+Obs: tentar como solução na proxima vez: Excluir a pasta "Servers" do workspace, e criar de novo o servidor TomCat no Eclipse.
+
+Versão 5.0 - 01/08/2019
+* erro ao clicar no botão cadastrar do formulario "HTTP Status 405 - HTTP method POST is not supported by this URL"
+Solução -> Retirado o "method="post" do form do arquivo formulario.html".
+* o TomCat ainda não esta reconehcendo o CSS no formulario.html.
+
+Versão 6.0 - 02/08/2019
+- Criado a classe AlteraCadastroServlet para fazer a alteração do cadastro.
+- Alterado o tipo da variavel "id" de Long para String.
+- Ajustes nos métodos do CRUD da classe DAO.
+- Criado o arquivo 404.html para servir como redirecionamento de páginas inexistentes.
+- Ajustado o Web.xml com o <error-page> error-code: 404.
+* erro ao tentar executar o servidor TomCat, retirado o trecho do Web.xml.
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>HTML/404.html</location>
+  </error-page>
+
+Versão 7.0 - 08/08/2019
+- Colocado o atriibuto "name" nos botões do arquivo formulario.html.
+- ajustado a Servlet "CadastroServlet" para verificar cada botão selecionado, e cada um executar a sua função do CRUD.
+- deletado a Servlet "AlteraCadastroServlet".
+- deixado toda a responsabilidade de verificação dos campos selecionados na Servlet "CadastroServlet".
+- adicionado novamente os dois pontos e a barra (../) no começo do link do CSS.
+
+Versão 8.0 - 09/08/2019
+- Criado uma pasta para os arquivos .jsp, dentro da pasta WebContent com o nome JSP.
+- criado o arquivo "lista-contatos-scriptlet.jsp" para listar todos os contatos do BD.
+* erro ao tentar executar esse jsp no TomCat.
+
+Versão 9.0 - 12/08/2019
+- Criado uma Servlet "ListaServlet" para listar os contatos.
+* ainda da erro ao tentar executar a jsp.
+Solução - 15/08/2019 -> Instalado uma versão mais atualizado do TomCat, retirado a v.7 e instalado a v.9.
+
+Versão 10.0 - 15/08/2019
+- Criado o arquivo "ola.jsp" para testar a execução do .jsp no TomCat.
+- Ajustado o arquivo "formulario.html" e "style.css", para melhorar a visualização do formulario.
+- Deletado a Servlet "ListaServlet".
+- Ajustado o "CadastroServlet", na parte que verifica se o botão lista foi selecionado (if(lista)), redirecionar para o arquivo "lista-contatos-scriptlet.jsp", para fazer a listagem de todos os contatos.
+- Deixado ainda toda a responsabilidade na Servlet "CadastroServlet".
+- Adicionado o botão voltar no CRUD.
+- Ajustado a tabela de listar o contato, para melhor visualização, do arquivo "lista-contatos-scriptlet.jsp".
+
+Versão 11.0 - 27/08/2019
+- Criado o arquivo "editar.jsp".
+- Criado um metodo no DAO com o nome "AlteraId", para poder encontrar somente um contato especifico.
+- Ajustado a servlet "CadastroServlet" (if(listar)) para poder mandar um objeto do tipo contato pra o arquivo editar.jsp, quando abrir o editar.jsp, vai carregar os dados desse contato especifico para poder fazer a alterarção.
