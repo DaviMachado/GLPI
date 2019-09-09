@@ -1,6 +1,7 @@
+<%@page import="br.com.wi2.glpi.core.dao.*"%>
+<%@page import="br.com.wi2.glpi.core.dominio.*" %>
+
 <%@page import="java.util.List"%>
-<%@page import="DAO.*"%>
-<%@page import="Modelo.*" %>
 
 <html>
 <head>

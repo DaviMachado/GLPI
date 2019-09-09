@@ -1,7 +1,8 @@
+<%@page import="br.com.wi2.glpi.core.dao.*"%>
+<%@page import="br.com.wi2.glpi.core.dominio.*" %>
+<%@page import="br.com.wi2.glpi.view.controller.*"%>
+
 <%@page import="java.util.List"%>
-<%@page import="DAO.*"%>
-<%@page import="Modelo.*" %>
-<%@page import="Servlet.*"%>
 <%@page import="javax.servlet.http.HttpServlet"%>
 <%@page import="javax.servlet.http.HttpServletRequest"%>
 <%@page import="javax.servlet.http.HttpServletResponse"%>

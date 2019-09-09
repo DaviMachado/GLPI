@@ -9,12 +9,12 @@
  
   <servlet>
     <servlet-name>Main Servlet</servlet-name>
-    <servlet-class>Servlet.MainServlet</servlet-class>
+    <servlet-class>br.com.wi2.glpi.view.controller.MainServlet</servlet-class>
   </servlet>
    
   <servlet>
     <servlet-name>Formulario Servlet</servlet-name>
-    <servlet-class>Servlet.FormularioServlet</servlet-class>
+    <servlet-class>br.com.wi2.glpi.view.controller.FormularioServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
