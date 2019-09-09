@@ -72,3 +72,10 @@ Versão 11.0 - 27/08/2019
 - Criado o arquivo "editar.jsp".
 - Criado um metodo no DAO com o nome "AlteraId", para poder encontrar somente um contato especifico.
 - Ajustado a servlet "CadastroServlet" (if(listar)) para poder mandar um objeto do tipo contato pra o arquivo editar.jsp, quando abrir o editar.jsp, vai carregar os dados desse contato especifico para poder fazer a alterarção.
+
+06/09/2019 - Compartilhado o projeto no GiHub.
+
+Versão 12.0 - 09/09/2019
+- Renomeado as pastas para se adequar a arquitetura MVC e aos Design Patterns DAO e Factory.
+- Anexados os diagramas no projeto.
+- Criado a interface "IEntidade", e as classes "EntidadeDominio", "Pessoa" e "Usuario".
