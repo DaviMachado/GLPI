@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- @author Davi Rodrigues-->
+<!-- @date 11/09/2019 -->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cadastro de Usuários</title>
+		<!-- <link href="../CSS/style.css" rel="stylesheet" type="text/css"> -->
+		<link href="../CSS/bootstrap.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<fieldset class="form-group">
+		<legend align="center">Formulário de Usuários do GLPI</legend>
+			<form action="http://localhost:8080/GLPI/cadastro">
+			
+				<!-- Login & Senha -->
+				<div class="form-row">
+				    <div class="form-group col-md-12">
+				      <label>Login</label>
+				      <input type="text" class="form-control" name="login" placeholder="Login" required>
+				    </div>
+			  	</div>
+			  	<div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label>Senha</label>
+				      <input type="password" class="form-control" name="senha" placeholder="Senha" required>
+				      <!--
+				      <small class="form-text">
+					  	Sua senha deve ter entre 8 e 20 caracteres, os quais devem ser letras e números, sem espaços, caracteres especiais ou emojis.
+					  </small>
+					  -->
+				    </div>
+   				    <div class="form-group col-md-6">
+				      <label>Confirmar Senha</label>
+				      <input type="password" class="form-control" name="confirmarSenha" placeholder="Confirmar Senha" required>
+				    </div>
+			  	</div>
+			  	
+			  	<!-- E-mail -->
+				<div class="form-row">
+				    <div class="form-group col-md-12">
+				      <label>E-mail</label>
+				      <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+				    </div>
+			  	</div>
+			  	
+			  	<!-- Codigo Usuario -->
+				<div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label>Codigo Usuario</label>
+				      <input type="text" class="form-control" name="CdUsuario" placeholder="Codigo Usuario">
+				    </div>
+			  	</div>
+				
+				<!-- Setor -->
+				<div class="form-group col-md-6">
+				    <label>Setor</label>
+				    <select class="form-control">
+					    <option selected>Escolher...</option>
+					    <option value="administrativo">Administrativo</option>
+					    <option value="financeiro">Financeiro</option>
+					    <option value="recursosHumanos">Recursos Humanos</option>
+					    <option value="comercial">Comercial</option>
+					    <option value="operacional">Operacional</option>
+				    </select>
+				</div>
+				
+				<!-- Botões -->
+				<div col-md-2 align="center">
+					<button class="btn btn-primary" name="operacao" value="SALVAR">Cadastrar</button>
+					<button class="btn btn-primary" name="operacao" value="CONSULTAR">Consultar</button>
+					<button class="btn btn-primary" name="operacao" value="ALTERAR">Alterar</button>
+					<button class="btn btn-primary" name="operacao" value="EXCLUIR">Excluir</button>
+				</div>
+
+			</form>
+		</fieldset>
+	</body>
+</html>

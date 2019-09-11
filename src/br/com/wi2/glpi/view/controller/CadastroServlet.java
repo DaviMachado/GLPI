@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.wi2.glpi.core.dao.ContatoDAO;
+import br.com.wi2.glpi.core.dao.impl.ContatoDAO;
 import br.com.wi2.glpi.core.dominio.Contato;
 
 // Registrando uma Servlet sem a necessidade do arquivo "web.xml".

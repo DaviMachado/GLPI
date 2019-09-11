@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.les.marmitex.core.dominio.EntidadeDominio;
+
+import br.com.wi2.glpi.view.helper.IViewHelper;
+
 /**
  * Responsavel por processar todas as requisições feita pelo usuario,
  * configurado conforme o arquivo web.xml
@@ -29,7 +33,10 @@ public class ControllerServlet extends HttpServlet {
         String uri = request.getRequestURI();
 		
         //Obtêm um viewhelper indexado pela uri que invocou esta servlet
-        //IViewHelper vh = (IViewHelper) context.getBean(uri);
+        IViewHelper vh = (IViewHelper) context.getBean(uri);
+        
+        //O viewhelper retorna a entidade especifica para a tela que chamou esta servlet
+        EntidadeDominio entidade = vh.getEntidade(request);
         
 	}
 	

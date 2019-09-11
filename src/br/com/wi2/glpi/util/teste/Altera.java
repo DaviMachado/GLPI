@@ -1,6 +1,6 @@
 package br.com.wi2.glpi.util.teste;
 
-import br.com.wi2.glpi.core.dao.ContatoDAO;
+import br.com.wi2.glpi.core.dao.impl.ContatoDAO;
 import br.com.wi2.glpi.core.dominio.Contato;
 
 public class Altera {

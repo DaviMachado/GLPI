@@ -1,4 +1,4 @@
-package br.com.wi2.glpi.core.dao;
+package br.com.wi2.glpi.core.dao.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

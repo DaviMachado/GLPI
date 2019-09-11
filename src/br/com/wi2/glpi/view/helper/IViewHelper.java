@@ -15,6 +15,7 @@ import br.com.wi2.glpi.core.dominio.Resultado;
  * @date 10/09/2019
  */
 public interface IViewHelper {
+	
 	public EntidadeDominio getEntidade(HttpServletRequest request);
 
     public void setView(Resultado resultado, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException;

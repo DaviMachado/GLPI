@@ -3,7 +3,7 @@ package br.com.wi2.glpi.util.teste;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import br.com.wi2.glpi.core.dao.ContatoDAO;
+import br.com.wi2.glpi.core.dao.impl.ContatoDAO;
 import br.com.wi2.glpi.core.dominio.Contato;
 import br.com.wi2.glpi.util.ConnectionFactory;
 
