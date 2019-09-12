@@ -7,8 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.les.marmitex.core.dominio.EntidadeDominio;
-
+import br.com.wi2.glpi.core.dominio.EntidadeDominio;
 import br.com.wi2.glpi.view.helper.IViewHelper;
 
 /**
