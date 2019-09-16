@@ -8,6 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.wi2.glpi.core.dominio.EntidadeDominio;
+import br.com.wi2.glpi.core.dominio.Resultado;
+import br.com.wi2.glpi.view.command.ICommand;
+import br.com.wi2.glpi.view.command.impl.AlterarCommand;
+import br.com.wi2.glpi.view.command.impl.ConsultarCommand;
+import br.com.wi2.glpi.view.command.impl.ExcluirCommand;
+import br.com.wi2.glpi.view.command.impl.SalvarCommand;
 import br.com.wi2.glpi.view.helper.IViewHelper;
 
 /**
@@ -37,6 +43,23 @@ public class ControllerServlet extends HttpServlet {
         //O viewhelper retorna a entidade especifica para a tela que chamou esta servlet
         EntidadeDominio entidade = vh.getEntidade(request);
         
+        //Obtém a operação executada
+        String operacao = request.getParameter("operacao");
+
+        // Recupera o command correspondente com a operacao
+        ICommand command = commands.get(operacao);
+
+        /*Executa o command que chamará a fachada para executar a operação requisitada
+        * o retorno é uma instância da classe resultado que pode conter mensagens derro
+        * ou entidades de retorno
+         */
+        Resultado resultado = command.execute(entidade);
+
+        /*
+        * Executa o método setView do view helper específico para definir como deverá ser apresentado
+        * o resultado para o usuário
+         */
+        vh.setView(resultado, request, response);
 	}
 	
 	// Method doGet que redireciona para o processRequest
