@@ -1,0 +1,15 @@
+create database glpi;
+
+create table usuario (
+	id	BIGINT	NOT	NULL	AUTO_INCREMENT,
+	login	VARCHAR(255),
+	senha	VARCHAR(255),
+	email	VARCHAR(255),
+	cd_usuario	VARCHAR(255),
+	setor	VARCHAR(255),
+	primary	key	(id)
+);
+
+use glpi;
+
+select * from usuario;
