@@ -57,10 +57,28 @@ public class CadastroServlet2 extends HttpServlet {
 		    writer.println("<input type=\"button\" value=\"Voltar\" onclick=\"history.back()\">");
 		}
 		else if (("ALTERAR").equals(operacao)) {
+			// Edita o usuario
+			dao.alterar(usuario);
 			
+			writer.println("<h1>Cadastro Editado com sucesso!</h1>");
+			
+			writer.println("<ul>");
+		    writer.println("<li>Login: " + usuario.getLogin() + "</li>");
+		    writer.println("<li>Senha: " + usuario.getSenha() + "</li>");
+		    writer.println("<li>E-mail: " + usuario.getEmail() + "</li>");
+		    writer.println("<li>Cd Usuario: " + usuario.getCdUsuario() + "</li>");
+		    writer.println("<li>Setor: " + usuario.getSetor() + "</li>");
+		    writer.println("</ul>");
+		    
+		    writer.println("<input type=\"button\" value=\"Voltar\" onclick=\"history.back()\">");
 		}
 		else if (("EXCLUIR").equals(operacao)) {
+			// Deleta o cadastro do usuario conforme o codigo do usuario
+			dao.excluir(usuario);
 			
+			writer.println("<h1>Cadastro Removido com sucesso!</h1>");
+			
+			writer.println("<input type=\"button\" value=\"Voltar\" onclick=\"history.back()\">");
 		}
 		else if (("CONSULTAR").equals(operacao)) {
 			

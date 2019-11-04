@@ -38,28 +38,28 @@ public class ControllerServlet extends HttpServlet {
         String uri = request.getRequestURI();
 		
         //Obtêm um viewhelper indexado pela uri que invocou esta servlet
-        IViewHelper vh = (IViewHelper) context.getBean(uri);
+        //IViewHelper vh = (IViewHelper) context.getBean(uri);
         
         //O viewhelper retorna a entidade especifica para a tela que chamou esta servlet
-        EntidadeDominio entidade = vh.getEntidade(request);
+        //EntidadeDominio entidade = vh.getEntidade(request);
         
         //Obtém a operação executada
         String operacao = request.getParameter("operacao");
 
         // Recupera o command correspondente com a operacao
-        ICommand command = commands.get(operacao);
+        //ICommand command = commands.get(operacao);
 
         /*Executa o command que chamará a fachada para executar a operação requisitada
         * o retorno é uma instância da classe resultado que pode conter mensagens derro
         * ou entidades de retorno
          */
-        Resultado resultado = command.execute(entidade);
+        //Resultado resultado = command.execute(entidade);
 
         /*
         * Executa o método setView do view helper específico para definir como deverá ser apresentado
         * o resultado para o usuário
          */
-        vh.setView(resultado, request, response);
+        //vh.setView(resultado, request, response);
 	}
 	
 	// Method doGet que redireciona para o processRequest

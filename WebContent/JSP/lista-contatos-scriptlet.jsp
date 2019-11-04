@@ -1,5 +1,6 @@
 <%@page import="br.com.wi2.glpi.core.dao.*"%>
 <%@page import="br.com.wi2.glpi.core.dominio.*" %>
+<%@page import="br.com.wi2.glpi.core.dao.impl.*" %>
 
 <%@page import="java.util.List"%>
 

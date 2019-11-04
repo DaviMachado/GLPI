@@ -46,7 +46,7 @@ public class UsuarioDAO {
 	// Alterar Usuario
 	public void alterar (Usuario usuario) {
 		String sql = "update usuario set login=?, senha=?," +
-				" email=?, setor=? where cd_cliente=?";
+				" email=?, setor=? where cd_usuario=?";
 		
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
@@ -68,7 +68,7 @@ public class UsuarioDAO {
 	// Excluir Usuario
 	public void excluir (Usuario usuario) {
 		try {
-			PreparedStatement stmt = connection.prepareStatement("delete from usuario where cd_cliente=?");
+			PreparedStatement stmt = connection.prepareStatement("delete from usuario where cd_usuario=?");
 			
 			stmt.setString(1, usuario.getCdUsuario());
 			
