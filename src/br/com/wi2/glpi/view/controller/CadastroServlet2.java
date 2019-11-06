@@ -81,7 +81,11 @@ public class CadastroServlet2 extends HttpServlet {
 			writer.println("<input type=\"button\" value=\"Voltar\" onclick=\"history.back()\">");
 		}
 		else if (("CONSULTAR").equals(operacao)) {
+			// Lista todos os contatos do BD
+			writer.println("<h1>Listagem dos Contatos!</h1>");
 			
+			// Redireciona para o arquivo .jsp
+			request.getRequestDispatcher("JSP/lista-contatos-scriptlet2.jsp").forward(request, response);
 		}
 	}
 	
